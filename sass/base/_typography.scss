@@ -1,0 +1,41 @@
+.h1 {
+  font-size: 32px;
+  font-weight: bold;
+  font-family: 'Karla', sans-serif;
+  letter-spacing: -1px;
+  line-height: 100%;
+
+  @media (min-width: 1440px) {
+    font-size: 56px;
+  }
+}
+
+.text-sm {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Karla', sans-serif;
+  letter-spacing: 0px;
+  line-height: 150%;
+}
+
+.text-m {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Karla', sans-serif;
+  letter-spacing: 0px;
+  line-height: 150%;
+}
+
+.p {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Karla', sans-serif;
+  letter-spacing: 0px;
+  line-height: 150%;
+
+  @media (min-width: 1440px) {
+    font-size: 16px;
+  }
+}
+
+// 400,600,700

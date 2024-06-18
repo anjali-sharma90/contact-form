@@ -1,0 +1,298 @@
+* {
+  box-sizing: border-box;
+}
+
+.main-container {
+  margin: 0 auto;
+  max-width: 375px;
+  background-color: $color-light-green;
+  padding: 32px 16px;
+  position: relative;
+
+  @media (min-width: 768px) {
+    max-width: 768px;
+    padding: 128px 16px;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 1440px;
+  }
+}
+
+.contact-form__container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 343px;
+  background-color: $color-white;
+  border-radius: 16px;
+  padding: 24px;
+  // position: relative;
+  @media (min-width: 768px) {
+    max-width: 690px;
+    padding: 40px;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 736px;
+  }
+}
+
+.contact-form__success {
+  display: none;
+  background-color: $color-dark-green;
+  width: 327px;
+  // height: 131px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 12px;
+  // margin-top: 8px;
+  padding: 24px;
+
+  @media (min-width: 768px) {
+    width: 498px;
+    // height: 107px;
+    position: absolute;
+    // top: 24px;
+    padding: 24px;
+  }
+
+  @media (min-width: 1440px) {
+    position: absolute;
+    // top: 24px;
+  }
+
+  &--show {
+    display: block;
+  }
+}
+
+.contact-form__success-msg {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.contact-form__p {
+  color: $color-lightest-green;
+}
+
+.contact-form__message {
+  color: $color-lightest-green;
+}
+
+.contact-form__contact {
+  margin-bottom: 32px;
+  color: $color-dark-grey;
+}
+
+.contact-form__form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-form__name {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+  }
+}
+
+.contact-form__input {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &--query {
+    gap: 16px;
+  }
+}
+
+.contact-form__query-type {
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+  }
+}
+
+.contact-form__label-star {
+  display: flex;
+  gap: 8px;
+}
+
+.contact-form__star {
+  color: $color-dark-green;
+}
+
+.input-box {
+  border-radius: 8px;
+  border: 2px solid $color-light-green;
+  width: 295px;
+  padding: 12px 24px;
+
+  &--query {
+    display: flex;
+    gap: 12px;
+
+    &:has(input[type='radio']:checked) {
+      background-color: $color-light-green;
+    }
+  }
+
+  &:focus,
+  &:active {
+    border: 2px solid $color-dark-green;
+    // cursor: pointer;
+    outline: none;
+  }
+
+  &:hover {
+    // cursor: pointer;
+  }
+
+  &.error {
+    border: 2px solid red;
+  }
+}
+
+.custom-radio {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid $color-dark-grey;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-radio::before {
+  content: '';
+  width: 10px;
+  background-color: $color-dark-green;
+  height: 10px;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+}
+
+.custom-radio:checked::before {
+  transform: scale(1);
+}
+
+.label {
+  color: $color-dark-grey;
+}
+
+.message {
+  border-radius: 8px;
+  border: 2px solid $color-light-green;
+  width: 100%;
+  padding: 12px 24px;
+  height: 240px;
+
+  @media (min-width: 768px) {
+    height: 132px;
+  }
+
+  @media (min-width: 1440px) {
+    height: 105px;
+  }
+
+  &:hover {
+    border: 2px solid $color-dark-green;
+    // cursor: pointer;
+  }
+
+  &.error {
+    border: 2px solid red;
+  }
+}
+
+.contact-form__checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-form__checkbox-up {
+  display: flex;
+  margin-top: 40px;
+
+  @media (min-width: 768px) {
+    width: 100%;
+  }
+}
+
+.input-box--button {
+  margin-top: 40px;
+  background-color: $color-dark-green;
+  text-align: center;
+  color: $color-white;
+
+  @media (min-width: 768px) {
+    width: 100%;
+  }
+
+  &:hover {
+    background-color: lighten(#0b0b43, 12%);
+    // cursor: pointer;
+  }
+}
+
+.label-checkbox {
+  margin: 0 16px;
+}
+
+.custom-checkbox {
+  appearance: none;
+  outline: 2px solid green;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+
+  &::after {
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: '\2713';
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    color: white;
+    font-size: 16px;
+  }
+}
+
+.custom-checkbox:checked {
+  &::after {
+    visibility: visible;
+  }
+}
+
+.error-message {
+  color: red;
+  display: none;
+
+  &--show {
+    display: block;
+  }
+}
+
+.show {
+  display: block;
+}
